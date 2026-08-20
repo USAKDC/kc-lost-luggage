@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Found Bag - KC-001</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f2f4f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 560px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.10);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: .5px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 18px 0 10px;
+            line-height: 1.15;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .thank-you {
+            font-size: 17px;
+        }
+
+        .bag-id {
+            background: #f3f4f6;
+            border-radius: 10px;
+            padding: 13px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 9px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #94a3b8;
+            outline-offset: 1px;
+        }
+
+        .optional {
+            font-weight: normal;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 15px;
+            background: #111827;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #374151;
+        }
+
+        .privacy {
+            margin-top: 24px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .required {
+            color: #b91c1c;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <span class="badge">LOST LUGGAGE</span>
+
+        <h1>Thank You for Finding My Bag!</h1>
+
+        <p class="thank-you">
+            If you found this luggage, thank you for taking the time
+            to let me know. Please use the form below to contact me.
+        </p>
+
+        <div class="bag-id">
+            Bag ID: KC-001
+        </div>
+
+        <p>
+            You do <strong>not</strong> need to provide your name,
+            email address, or phone number to send a message.
+        </p>
+
+        <h2>Tell Me Where You Found It</h2>
+
+        <form action="https://formspree.io/f/mwleayva"
+              method="POST">
+
+            <label for="found_location">
+                Where did you find the bag?
+                <span class="required">*</span>
+            </label>
+
+            <select id="found_location"
+                    name="found_location"
+                    required>
+
+                <option value="">
+                    Please select
+                </option>
+
+                <option value="Airport">
+                    Airport
+                </option>
+
+                <option value="Airline baggage area">
+                    Airline baggage area
+                </option>
+
+                <option value="Hotel">
+                    Hotel
+                </option>
+
+                <option value="Restaurant or business">
+                    Restaurant or business
+                </option>
+
+                <option value="Parking lot">
+                    Parking lot
+                </option>
+
+                <option value="Road or roadside">
+                    Road or roadside
+                </option>
+
+                <option value="Public transportation">
+                    Public transportation
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="specific_location">
+                Specific location
+                <span class="required">*</span>
+            </label>
+
+            <input type="text"
+                   id="specific_location"
+                   name="specific_location"
+                   placeholder="Example: RSW Terminal B"
+                   required>
+
+
+            <label for="message">
+                Message
+                <span class="required">*</span>
+            </label>
+
+            <textarea id="message"
+                      name="message"
+                      placeholder="Tell me where the bag is and how I can retrieve it."
+                      required></textarea>
+
+
+            <label for="finder_contact">
+                Your email or phone
+                <span class="optional">(optional)</span>
+            </label>
+
+            <input type="text"
+                   id="finder_contact"
+                   name="finder_contact"
+                   placeholder="Optional — so I can respond to you">
+
+
+            <input type="hidden"
+                   name="bag_id"
+                   value="KC-001">
+
+            <input type="hidden"
+                   name="_subject"
+                   value="🚨 LOST LUGGAGE ALERT - Bag KC-001">
+
+
+            <button type="submit">
+                SEND MESSAGE TO OWNER
+            </button>
+
+        </form>
+
+
+        <div class="privacy">
+            <strong>Privacy:</strong><br>
+            Your contact information is optional.
+            You can send a message without identifying yourself.
+            Please do not enter passwords, financial information,
+            or other sensitive information.
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        Bag Identification System • KC-001
+    </div>
+
+</div>
+
+</body>
+</html>
+```
